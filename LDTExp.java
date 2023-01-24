@@ -28,7 +28,7 @@ public class LDTExp{
 
     // to format the results in a more 'human' style we use formatters
     
-    DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+    DateTimeFormatter df = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM); // note how all formatters, regardless whether it is meant for time or date, draw the same class of Date-and-TimeFormatter! Only difference being the form of the ofLocalizedX() version. 
     DateTimeFormatter tf = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM);
     DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
     DateTimeFormatter mydft = DateTimeFormatter.ofPattern("'The year of 'yyyy',--or 'yy' for short-- in the 'MM'th month, 'mm'minute. It is the 'D'st day of the year, ' d'th day of the month, (which is on a ' EEEE', or' e'th day of the week for localized dates)'");

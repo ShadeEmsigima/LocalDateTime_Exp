@@ -32,6 +32,7 @@ public class LDTExp{
     DateTimeFormatter tf = DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM);
     DateTimeFormatter dtf = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
     DateTimeFormatter mydft = DateTimeFormatter.ofPattern("'The year of 'yyyy',--or 'yy' for short-- in the 'MM'th month, 'mm'minute. It is the 'D'st day of the year, ' d'th day of the month, (which is on a ' EEEE', or' e'th day of the week for localized dates)'");
+    DateTimeFormatter dutchy = DateTimeFormatter.ofPattern("hh:mm' o clock, ' E d'st of the 'M'st month' YYYY");
 
     {
         System.out.println();
@@ -40,7 +41,8 @@ public class LDTExp{
       System.out.println("Formatted date: " + ld.format(df)); // have obj format with formatter
       System.out.println("Formatted time: " + tf.format(lt)); // have formatter format obj
       System.out.println("Formatted date-time: " + ldt.format(dtf));
-      System.out.println("Custom formatter: " + mydft.format(ldt));
+      System.out.println("First custom formatter: " + mydft.format(ldt));
+      System.out.println("Second custom formatter: " + dutchy.format(ldt));
       
     {
         System.out.println("\n===============================");
